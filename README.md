@@ -1,16 +1,21 @@
 # spring-todo
 
-Todo app built with Spring Boot.
+Todo app built with Spring Boot. Learn from the [tutorial](https://ithelp.ithome.com.tw/users/20118857/ironman/3007).
 
 - [spring-todo](#spring-todo)
   - [Architecture](#architecture)
     - [DAO](#dao)
-  - [Packages](#packages)
+  - [Dependencies and Packages](#dependencies-and-packages)
     - [H2 Database](#h2-database)
     - [Spring Boot DevTools](#spring-boot-devtools)
     - [Lombok](#lombok)
     - [Spring Data JPA](#spring-data-jpa)
     - [Junit](#junit)
+    - [Mockito](#mockito)
+  - [Tools](#tools)
+    - [Postman](#postman)
+    - [Swagger](#swagger)
+    - [REST Client](#rest-client)
 
 ## Architecture
 
@@ -34,7 +39,7 @@ Data Access Object. It provides an abstract interface and some specific data ope
 public interface TodoDao extends CrudRepository<Todo, Integer> {}
 ```
 
-## Packages
+## Dependencies and Packages
 
 ### H2 Database
 
@@ -81,3 +86,37 @@ Run TEST with Coverage. (Element: Class% / Method% / Line%)
 - org.junit.jupiter.api
 - @Test
 - assertEquals()
+
+AAA patern:
+
+- Arrange
+- Act
+- Assert
+
+### Mockito
+
+A mocking framework for unit tests in Java.
+
+## Tools
+
+### Postman
+
+[Postman](https://www.postman.com/)
+is an API platform for building and using APIs.
+
+### Swagger
+
+[Swagger](https://swagger.io/) UI: Visualize OpenAPI Specification definitions.
+
+### REST Client
+
+```text
+Method Request-URI HTTP-Version
+Header-field: Header-value
+
+Request-Body
+```
+
+- IntelliJ IDEA - [HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html#creating-http-request-files)
+
+- VSCode - [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
