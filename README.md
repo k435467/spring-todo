@@ -5,13 +5,15 @@ Todo app built with Spring Boot. Learn from the [tutorial](https://ithelp.ithome
 - [spring-todo](#spring-todo)
   - [Architecture](#architecture)
     - [DAO](#dao)
-  - [Dependencies and Packages](#dependencies-and-packages)
+  - [Dependencies and Frameworks](#dependencies-and-frameworks)
     - [H2 Database](#h2-database)
     - [Spring Boot DevTools](#spring-boot-devtools)
     - [Lombok](#lombok)
     - [Spring Data JPA](#spring-data-jpa)
     - [Junit](#junit)
     - [Mockito](#mockito)
+    - [MockMvc](#mockmvc)
+    - [JWT](#jwt)
   - [Tools](#tools)
     - [Postman](#postman)
     - [Swagger](#swagger)
@@ -39,7 +41,7 @@ Data Access Object. It provides an abstract interface and some specific data ope
 public interface TodoDao extends CrudRepository<Todo, Integer> {}
 ```
 
-## Dependencies and Packages
+## Dependencies and Frameworks
 
 ### H2 Database
 
@@ -96,6 +98,14 @@ AAA patern:
 ### Mockito
 
 A mocking framework for unit tests in Java.
+
+### MockMvc
+
+Test web layer.
+
+### JWT
+
+JSON Web Token. Usually for auth.
 
 ## Tools
 
