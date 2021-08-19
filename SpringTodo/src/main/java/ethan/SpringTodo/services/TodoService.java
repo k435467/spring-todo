@@ -11,8 +11,12 @@ import java.util.List;
 @Service
 public class TodoService implements ITodoService{
 
+    private final TodoRepository todoRepository;
+
     @Autowired
-    private TodoRepository todoRepository;
+    public TodoService(TodoRepository todoRepository) {
+        this.todoRepository = todoRepository;
+    }
 
     @Override
     public List<Todo> getTodos() {

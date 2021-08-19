@@ -18,6 +18,10 @@ Todo app built with Spring Boot. Learn from the [tutorial](https://ithelp.ithome
     - [Postman](#postman)
     - [Swagger](#swagger)
     - [REST Client](#rest-client)
+  - [Dependency Injection](#dependency-injection)
+    - [Constructor-based](#constructor-based)
+    - [Setter-base](#setter-base)
+    - [Field-base](#field-base)
 
 ## Architecture
 
@@ -130,3 +134,59 @@ Request-Body
 - IntelliJ IDEA - [HTTP Client](https://www.jetbrains.com/help/idea/http-client-in-product-code-editor.html#creating-http-request-files)
 
 - VSCode - [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+## Dependency Injection
+
+- Constructor-based dependency injection
+- Setter-based dependency injection
+- Field-based dependency injection
+
+### Constructor-based
+
+It is recommended for required dependencies allowing them to be immutable and preventing them to be null.
+
+```java
+@Component
+public class ConstructorBasedInjection {
+
+    private final InjectedBean injectedBean;
+
+    @Autowired
+    public ConstructorBasedInjection(InjectedBean injectedBean) {
+        this.injectedBean = injectedBean;
+    }
+
+}
+```
+
+### Setter-base
+
+It is recommended for optional dependencies.
+
+```java
+@Component
+public class ConstructorBasedInjection {
+
+    private InjectedBean injectedBean;
+
+    @Autowired
+    public void setInjectedBean(InjectedBean injectedBean) {
+        this.injectedBean = injectedBean;
+    }
+
+}
+```
+
+### Field-base
+
+Not recommended.
+
+```java
+@Component
+public class ConstructorBasedInjection {
+
+    @Autowired
+    private InjectedBean injectedBean;
+
+}
+```
