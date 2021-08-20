@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class TodoService implements ITodoService{
+public class TodoService implements ITodoService {
 
     private final TodoRepository todoRepository;
 
@@ -38,7 +38,8 @@ public class TodoService implements ITodoService{
     @Override
     public void updateTodo(Long id, Todo todo) {
         Todo todoOg = todoRepository.findById(id).get();
-        todoOg.setTodoStatus(todo.getTodoStatus());
+//        todoOg.setTodoStatus(todo.getTodoStatus());
+        todoOg.setCompleted(todo.getCompleted());
         todoOg.setDescription(todo.getDescription());
         todoOg.setTitle(todo.getTitle());
         todoRepository.save(todoOg);

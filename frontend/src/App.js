@@ -44,10 +44,10 @@ export default function App() {
   function handleSubmit(item) {
     setModal(!modal);
     if (item.id) {
-      axios.put(`/api/todo/${item.id}/`, item).then(() => refreshList());
+      axios.put(`/api/todo/${item.id}`, item).then(() => refreshList());
       return;
     }
-    axios.post("/api/todo/", item).then(() => refreshList());
+    axios.post("/api/todo", item).then(() => refreshList());
   }
   function handleDelete(item) {
     axios.delete(`/api/todo/${item.id}`).then(() => refreshList());

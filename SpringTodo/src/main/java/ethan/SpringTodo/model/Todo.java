@@ -7,7 +7,10 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.sql.Timestamp;
 
 @Entity
@@ -28,8 +31,11 @@ public class Todo {
     @Column
     String description;
 
+//    @Column
+//    TodoStatus todoStatus;
+
     @Column
-    TodoStatus todoStatus;
+    Boolean completed;
 
     @CreationTimestamp
     @Column(updatable = false)

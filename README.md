@@ -2,7 +2,12 @@
 
 Todo app built with Spring Boot. Learn from tutorials: [ithome ironman](https://ithelp.ithome.com.tw/users/20118857/ironman/3007) , [section.io](https://www.section.io/engineering-education/spring-boot-crud-api/).
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/k435467/django-todo-react/master/demo/django-todo-react-demo.gif" width="300">
+</p>
+
 - [spring-todo](#spring-todo)
+  - [Usage](#usage)
   - [Architecture](#architecture)
     - [DAO](#dao)
   - [Dependencies and Frameworks](#dependencies-and-frameworks)
@@ -22,6 +27,16 @@ Todo app built with Spring Boot. Learn from tutorials: [ithome ironman](https://
     - [Constructor-based](#constructor-based)
     - [Setter-base](#setter-base)
     - [Field-base](#field-base)
+
+## Usage
+
+Bring up spring server and frontend react server.
+
+```shell
+cd frontend/
+npm i       # install dependency
+npm start   # start react server
+```
 
 ## Architecture
 

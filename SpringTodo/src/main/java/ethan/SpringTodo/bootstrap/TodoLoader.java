@@ -1,7 +1,6 @@
 package ethan.SpringTodo.bootstrap;
 
 import ethan.SpringTodo.model.Todo;
-import ethan.SpringTodo.model.TodoStatus;
 import ethan.SpringTodo.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -27,14 +26,16 @@ public class TodoLoader implements CommandLineRunner {
                 Todo.builder()
                         .title("Go to market")
                         .description("Buy eggs from market")
-                        .todoStatus(TodoStatus.NOT_COMPLETED)
+//                        .todoStatus(TodoStatus.NOT_COMPLETED)
+                        .completed(false)
                         .build()
         );
         todoService.insert(
                 Todo.builder()
                         .title("Go to school")
                         .description("Complete assignments")
-                        .todoStatus(TodoStatus.NOT_COMPLETED)
+//                        .todoStatus(TodoStatus.NOT_COMPLETED)
+                        .completed(false)
                         .build()
         );
         System.out.println("Sample Todos Loaded.");
