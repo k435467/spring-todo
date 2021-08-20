@@ -1,6 +1,6 @@
 # spring-todo
 
-Todo app built with Spring Boot. Learn from the [tutorial](https://ithelp.ithome.com.tw/users/20118857/ironman/3007).
+Todo app built with Spring Boot. Learn from tutorials: [ithome ironman](https://ithelp.ithome.com.tw/users/20118857/ironman/3007) , [section.io](https://www.section.io/engineering-education/spring-boot-crud-api/).
 
 - [spring-todo](#spring-todo)
   - [Architecture](#architecture)
@@ -140,6 +140,20 @@ Request-Body
 - Constructor-based dependency injection
 - Setter-based dependency injection
 - Field-based dependency injection
+
+**@Component** is an annotation that allows Spring to automatically detect our custom beans. Spring will:
+
+- Scan our app for classes anntated with @Component
+- Instantiate them and inject any specified dependencies into them
+- Inject them wherever needed
+
+Specialized Stereotype Annotations:
+
+- @Controller
+- @Service
+- @Repository
+- @Component
+- @CustomComponent
 
 ### Constructor-based
 
