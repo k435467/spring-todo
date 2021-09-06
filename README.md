@@ -6,6 +6,17 @@ Todo app built with Spring Boot. Learn from tutorials: [ithome ironman](https://
   <img src="https://raw.githubusercontent.com/k435467/django-todo-react/master/demo/django-todo-react-demo.gif" width="300">
 </p>
 
+A to-do web app.
+
+- Spring Boot
+  - Spring Web
+  - Spring Data JPA
+  - Lombok
+- React.js
+- Axios
+
+Followed the layered architecture described below to build it. A JAVA class to define the model. Create the repository interface by extending the CrudRepository. The service class defines the base CRUD operations. The REST API controller to communicate with the frontend.
+
 - [spring-todo](#spring-todo)
   - [Usage](#usage)
   - [Architecture](#architecture)
